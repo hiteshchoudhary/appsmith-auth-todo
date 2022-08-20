@@ -14,15 +14,13 @@ function TodoForm() {
         promise.then(
             function(response){
                 console.log(response);
-                
+                setTodo('');
+                window.location.reload(); // reload the page so that data shows up
             },
             function(error){
                 console.log(error);
             }
         );
-        //window.location.reload() // handle it in different way
-        e.target.reset();
-        //window.location.reload()
     }
 
 
